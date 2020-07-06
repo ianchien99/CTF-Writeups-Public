@@ -1,6 +1,8 @@
 # CDDC 2020
 
 CTF Hosted by dsta.gov.sg/CDDC
+[5-20 Minute Read]
+Writeups by NYP ScriptBabies
 
 ## Overview
 
