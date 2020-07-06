@@ -5,6 +5,7 @@ Writeups by NYP ScriptBabies
 
 CTF Hosted by dsta.gov.sg/CDDC
 https://www.dsta.gov.sg/brainhack
+
 Put your cybersecurity skills to the test! Solve team challenges, quizzes, and take part in an exhilarating 48-hour online team competition.
 New to cybersecurity? Fret not – there’s a comprehensive online training programme to equip you with the necessary techniques!
 
