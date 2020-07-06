@@ -1,11 +1,11 @@
 # CDDC 2020
 
-[5-20 Minute Read]
-Writeups by NYP ScriptBabies
+[5-10 Minute Read]
+Team NYP ScriptBabies
 
-CTF Hosted by dsta.gov.sg/CDDC
-https://www.dsta.gov.sg/brainhack
+CTF Hosted by dsta.gov.sg/CDDC (https://www.dsta.gov.sg/brainhack)
 
+```
 Put your cybersecurity skills to the test! Solve team challenges, quizzes, and take part in an exhilarating 48-hour online team competition.
 New to cybersecurity? Fret not – there’s a comprehensive online training programme to equip you with the necessary techniques!
 
@@ -16,6 +16,9 @@ If you are curious about cyber defence, or looking for a fun and exciting way to
 Pick up and practise fundamental cybersecurity techniques through our online training programme from 8 to 28 June to get up to speed. Face off against fellow enthusiasts and clear team challenges in an online Capture-The-Flag competition! Top teams stand to win attractive prizes.
 
 The camp consists of two categories: students in local junior colleges / Integrated Programme schools (Year 5 and 6) / Institutes of Technical Education; and full-time students in universities (undergraduates) / polytechnics.
+```
+
+![](Screenshots/ScriptBabies.png)
 
 ## Overview
 
@@ -99,6 +102,8 @@ Attached Files: myprog
 
 The file header is first checked, of which we quickly find out that it is an .ELF (Linux executable). The program is initially run to see that there were insufficient arguments. Since there is a key, we pass in the key together with the program and we get the flag for the challenge!
 
+![](Screenshots/%5BMisc-2%5D%20ARGH.png)
+
 **Flag**
 
 ```
@@ -139,6 +144,8 @@ The company's name is UnduplicitousCorp, sounds kinda fishy. Let's conduct some 
 
 Simplest OSINT challenge that gave us the flag right away when we searched for the company name. Youtube also was relevant to TV, which gave us the confirmation that we had the correct flag.
 
+![](Screenshots/%5BOSINT-1%5D%20Better%20Alternative%20Than%20TV.png)
+
 **Flag**
 
 ```
@@ -157,6 +164,8 @@ Note: This challenge does not require brute-forcing. There is no need to do so.
 
 Opening up the pdf, we see this chart. Just by eyeballing it, we knew that the flag was beneath the chart in the middle. However, at the bottom right of the document, there was an interesting message:
 ‘I wonder how to get an editable version of this’
+
+![](Screenshots/%5BOSINT-2%5D%20Fun%20with%20File%20Extensions.png)
 
 Initially, since this seemed like a powerpoint document, we changed it to .pptx and opened it with microsoft powerpoint, but we could not drag out the individual elements. So we decided to use microsoft word to edit it.
 
@@ -182,8 +191,11 @@ Note: This challenge does not require brute-forcing. There is no need to do so.
 
 We got stuck here for a very long time and apparently did not know we were supposed to look up for all subdomains for this challenge. I personally went to look at all the site certificates but nothing. That was when we went to slack to look for hints, and realised it was literally related to transparency.
 
+![](Screenshots/%5BOSINT-3%5D%20Transparency%20is%20the%20Best%20Policy.png)
+
 https://transparencyreport.google.com/https/certificates?hl=en&cert_search_auth=&cert_search_cert=&cert_search=include_subdomains:true;domain:unduplicitouscorp.tech&lu=cert_search
 
+![](Screenshots/%5BOSINT-3%5D%20Transparency%20is%20the%20Best%20Policy1.png)
 
 **Flag**
 
@@ -204,6 +216,8 @@ Attached Files: DecompileMe.zip
 Reading up on python decompilation, I stumbled upon this really useful article which included the tool link as below: https://blog.f-secure.com/how-to-decompile-any-python-binary/
 Tool: https://github.com/countercept/python-exe-unpacker
 
+![](Screenshots/%5BRE%20(Windows)-1%5D%20Decompile%20Me1.png)
+
 **Flag**
 
 ```
@@ -222,6 +236,8 @@ Attached Files: DissectMe.exe
 
 Extract files with 7zip and look under BITMAP. The flag is in FLAG.bmp
 
+![](Screenshots/%5BRE%20(Windows)-2%5D%20Dissect%20Me.png)
+
 **Flag**
 
 ```
@@ -239,6 +255,8 @@ Attached Files: CheatMe.exe
 **Solution**
 
 Cheat Engine. Select the running Cheatme.exe program and change scan type to “Exact value” and value to “All” since we do not know the data type. Enter the number in the minutes place. First scan is then performed. When the minute value changes, key in the 2nd number which is 54 then click “Next scan”. A single address should appear. Change the value to “0” and repeat for the hours. When time is up, viola! Flag appears.
+
+![](Screenshots/%5BRE%20(Windows)-3%5D%20Cheat%20Me1.png)
 
 **Flag**
 
@@ -275,6 +293,9 @@ zer0.chall.cddc20.nshc.sg 20002
 **Solution**
 
 We know max is: (2^32)-1 = 4294967296 - 1
+
+![](Screenshots/%5BPwn%20(Linux)-2%5D%20(2%5E31)-1.png)
+
 Using netcat and putting the maximum limit, we get the flag!
 
 **Flag**
@@ -313,6 +334,8 @@ Attached Files: img.jpg
 
 exif tool
 
+![](Screenshots/%5BForensics-1%5D%20Can't%20See%20A%20Thing1.png)
+
 **Flag**
 
 ```
@@ -333,6 +356,8 @@ Attached Files: Shell History.ova
 
 We decided to list the files with ls, but nothing. So we decided to use (ls -al) to list all files and found out that there was a directory called  .ash_history. That seemed like it, so we cat the entire bash history out and we can find that the flag is under the echo command.
 
+![](Screenshots/%5BForensics-2%5D%20Shell%20History.png)
+
 **Flag**
 
 ```
@@ -352,6 +377,8 @@ Attached Files: TopSecret
 Reference writeup: https://poqw.tistory.com/14
 FTK imager was used. Convert the file to .AD1 extension before adding logical evidence drive and extracting the files.
 
+![](Screenshots/%5BForensics-3%5D%20Top%20Secret.png)
+
 **Flag**
 
 ```
@@ -369,6 +396,8 @@ http://notime.chall.cddc20.nshc.sg:1337/
 **Solution**
 
 Inspect element
+
+![](Screenshots/%5BWeb-1%5D%20No%20Time.png)
 
 **Flag**
 
@@ -389,6 +418,12 @@ Note: Flag format is CDDC20{username_password}
 **Solution**
 
 Inspect element gave us the MD5 hashes of the login credentials, which we used Crackstation to crack the hashes.
+
+![](Screenshots/%5BWeb-2%5D%20VulnLogin.png)
+
+Crackstation tool used to crack the hashes.
+
+![](Screenshots/%5BWeb-2%5D%20VulnLogin1.png)
 
 **Flag**
 
@@ -426,6 +461,8 @@ Note: Decrypted text does not include the flag format "CDDC20{}". Add in the fla
 
 Caesar Cipher
 
+![](Screenshots/%5BCrypto-1%5D%20My%20Best%20Friend%2C%20Julius!.png)
+
 **Flag**
 
 ```
@@ -445,6 +482,9 @@ Note: Decrypted text does not include the flag format "CDDC20(}". Add in the fla
 **Solution**
 
 Tool: https://www.guballa.de/substitution-solver
+
+![](Screenshots/%5BCrypto-2%5D%20Cryptic%20Message.png)
+
 Looking at all the capitalised text, we form the flag: HERETURNS
 
 **Flag**
@@ -465,7 +505,9 @@ Attached Files: what_is_this.PNG
 
 **Solution**
 
-Dancing Man Cipher
+Dancing Man Cipher solver on DCode
+
+![](Screenshots/%5BCrypto-3%5D%20Iffy%20Glyphs.png)
 
 **Flag**
 
@@ -487,6 +529,8 @@ Attached Files: easy.pcap
 
 Wireshark Export Objects, Confidential.pdf
 
+![](Screenshots/%5BNetwork-1%5D%20Baby%20Shark.png)
+
 **Flag**
 
 ```
@@ -506,6 +550,8 @@ Attached Files: noisy.pcap
 **Solution**
 
 Wireshark Export Objects, yumcheese.txt
+
+![](Screenshots/%5BNetwork-2%5D%20Mama%20Shark.png)
 
 **Flag**
 
@@ -543,6 +589,8 @@ Being such a huge conglomerate, it can't be that they only have a tiny web serve
 
 ftp://unduplicitouscorp.tech
 
+![](Screenshots/%5BOSINT-1%5D%20Funky%20Transfer%20Pact_1.png)
+
 **Flag**
 
 ```
@@ -558,6 +606,8 @@ Following the breadcrumbs, this employee seems like an aspiring photographer.
 **Solution**
 
 Visit the projects page on flickr https://www.flickr.com/people/188575548@N05/
+
+![](Screenshots/%5BOSINT-2%5D%20Follow%20the%20Breadcrumbs1.png)
 
 **Flag**
 
@@ -577,6 +627,8 @@ Attached Files: so-noisy.png | much-confusing.png
 
 Tool used: https://www.diffchecker.com/image-diff
 
+![](Screenshots/Visual%20Noise.png)
+
 **Flag**
 
 ```
@@ -594,6 +646,9 @@ Attached Files: secret.dat
 **Solution**
 
 Tool used: http://des.online-domain-tools.com/
+
+![](Screenshots/ilovedes.png)
+
 The key was in the challenge description.
 
 **Flag**
@@ -612,7 +667,13 @@ Attached Files: 1.img
 
 **Solution**
 
-We had some interesting finds in the strings command. In the end, it was 7zip and file renaming of test.zip to test.xlsx, which gave the flag.
+We had some interesting finds in the strings command. It gave us an idea of the files that should be seen after we done the file extraction with 7zip.
+
+![](Screenshots/Recycling%20Bin.png)
+
+In the end, file renaming of test.zip to test.xlsx was done, which gave the flag.
+
+![](Screenshots/Recycling%20Bin1.png)
 
 **Flag**
 
@@ -664,6 +725,8 @@ What time is it?
 **Solution**
 
 Unix timestamps and conversion to plaintext.
+
+![](Screenshots/What%20Time%20Is%20It%20%5B1%5D.png)
 
 **Flag**
 
@@ -763,6 +826,8 @@ Tool used: https://getsharex.com/
 We used the Sharex tool in the end to solve this challenge.
 Sharex > tools > QR code > Decode
 
+![](Screenshots/How%20QueeR....png)
+
 **Flag**
 
 ```
@@ -822,6 +887,8 @@ Every self-respecting company needs a social media presence. There must be more 
 Twitter > Trello link manipulation.
 After clicking around at the various challenges, we looked in administrative work, to find the flag! https://trello.com/c/sXSFRP4U/4-cddc-2020-administrative-work
 
+![](Screenshots/%5BOSINT-1%5D%20There's%20A%20T%20In%20Every%20Flag1.png)
+
 **Flag**
 
 ```
@@ -839,6 +906,8 @@ Looks like even the CEO is gonna have a hard time getting out of the country. Al
 Scan barcode with the boarding pass and the flag is in plaintext.
 Source: https://trello.com/c/01wkbj9U/1-book-ceo-flights
 
+![](Screenshots/%5BOSINT-2%5D%20Travel%20Ban.png)
+
 **Flag**
 
 ```
@@ -853,7 +922,11 @@ The CEO's secretary hates password managers. "Why do you even need one when ther
 
 **Solution**
 
+![](Screenshots/%5BOSINT-3%5D%20Who%20Needs%20A%20Password%20Manager.png)
+
 Stegsolve offset
+
+![](Screenshots/%5BOSINT-3%5D%20Who%20Needs%20A%20Password%20Manager1.png)
 
 **Flag**
 
@@ -872,6 +945,8 @@ Attached Files: original.wav | suspicious.wav
 **Solution**
 
 Audacity
+
+![](Screenshots/My%20Favourite%20Music.png)
 
 **Flag**
 
