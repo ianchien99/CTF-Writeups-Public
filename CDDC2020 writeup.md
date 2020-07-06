@@ -1,10 +1,20 @@
 # CDDC 2020
 
-CTF Hosted by dsta.gov.sg/CDDC
-
 [5-20 Minute Read]
-
 Writeups by NYP ScriptBabies
+
+CTF Hosted by dsta.gov.sg/CDDC
+https://www.dsta.gov.sg/brainhack
+Put your cybersecurity skills to the test! Solve team challenges, quizzes, and take part in an exhilarating 48-hour online team competition.
+New to cybersecurity? Fret not – there’s a comprehensive online training programme to equip you with the necessary techniques!
+
+Organised by the Defence Science and Technology Agency (DSTA), the Cyber Defenders Discovery Camp (CDDC) returns for its eighth edition, as part of the BrainHack experience!
+
+If you are curious about cyber defence, or looking for a fun and exciting way to level up your cyber skills, mark your calendars for CDDC 2020 from 3 to 5 July!
+
+Pick up and practise fundamental cybersecurity techniques through our online training programme from 8 to 28 June to get up to speed. Face off against fellow enthusiasts and clear team challenges in an online Capture-The-Flag competition! Top teams stand to win attractive prizes.
+
+The camp consists of two categories: students in local junior colleges / Integrated Programme schools (Year 5 and 6) / Institutes of Technical Education; and full-time students in universities (undergraduates) / polytechnics.
 
 ## Overview
 
