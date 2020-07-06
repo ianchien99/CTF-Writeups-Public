@@ -5,7 +5,7 @@ CTF Hosted by dsta.gov.sg/CDDC
 ## Overview
 
 ```
-Challenge	                              	    Warp Gate       Flag
+Challenge                                     Warp Gate       Flag
 [Misc-1] Welcome to CDDC 2020                 WARP GATE 5     CDDC20{g1mM3_M0aRRr_pOiN75}
 [Misc-2] ARGH                                 WARP GATE 5     CDDC20{c0mManD_l1n3_ArguM3n75sSs}
 [Misc-3] Add to Your Reading List             WARP GATE 5     CDDC20{KNOW_UR_RIGHTS}
@@ -57,9 +57,11 @@ Clickity Clack                                WARP GATE 3
 ## [Misc-1] Welcome to CDDC 2020
 
 **Challenge**
+
 Free points for all! See you on Slack! ;)
 
 **Solution**
+
 As mentioned in the challenge description, ‘see you on slack’ when we navigated about the slack channel, we found the flag under the ‘details’ section.
 
 **Flag**
